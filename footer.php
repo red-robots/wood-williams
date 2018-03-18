@@ -8,18 +8,56 @@
  *
  * @package ACStarter
  */
-
+// Options
+$scotName = get_field('scot_name', 'option');
+$scotNumber = get_field('scot_number', 'option');
+$scotEmail = get_field('scot_email', 'option');
+$annName = get_field('ann_name', 'option');
+$annNumber = get_field('ann_number', 'option');
+$annEmail = get_field('ann_email', 'option');
+$facebook = get_field('facebook_link', 'option');
+$instagram = get_field('instagram_link', 'option');
 ?>
 
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'acstarter' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'acstarter' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'acstarter' ), 'acstarter', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-			</div><!-- .site-info -->
+
+		<section class="social">
+			<?php if( $facebook ) { ?>
+				<div class="icon">
+					<a href="<?php echo $facebook ?>" target="_blank">
+						<i class="fab fa-facebook-f fa-2x"></i>
+					</a>
+				</div>
+			<?php } ?>
+			<?php if( $instagram ) { ?>
+				<div class="icon">
+					<a href="<?php echo $instagram ?>" target="_blank">
+						<i class="fab fa-instagram fa-2x"></i>
+					</a>
+				</div>
+			<?php } ?>
+		</section>
+		
+		<section class="footer-agents">
+			<?php echo $scotName.' '.$scotNumber.' | '.$annName.' '.$annNumber; ?>
+		</section>
+
+		<section class="signups">
+			<div class="left sections">
+				<h2>SIGN UP FOR PROPERTY ALERTS</h2>
+			</div>
+			<div class="right sections">
+				<h2>SIGN UP FOR OUR NEWSLETTER</h2>
+			</div>
+		</section>
+
+		<div class="bottom">
+			<a href="<?php bloginfo('url'); ?>/sitemap">sitemap</a>
+		</div>
+
 	</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

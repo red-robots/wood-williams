@@ -3,7 +3,7 @@
 	display: block;
 	text-align: center;
 	width: 100%;
-	background-color: #fff;
+	// background-color: #fff;
 	@media screen and (min-width: $tabwidth) {
 		clear: none;
 		width: auto;
@@ -11,7 +11,7 @@
 
 	}
 	@media screen and (min-width: $deskwidth) {
-		text-align: left;
+		text-align: right;
 	}
 
 	ul {
@@ -86,8 +86,8 @@
 		font-weight: 300;
 		width: 100%;
 		@media screen and (min-width: $tabwidth) {
-			border-left: 1px solid #000;
-			line-height: 3;
+			// border-left: 1px solid #000;
+			line-height: 70px;
 			width: auto;
 			// padding: 0 20px;
 			&:first-of-type {
@@ -107,13 +107,13 @@
 		// align-items: center;
 		text-decoration: none;
 		padding: 10px 0px;
-		color: #fff;
+		color: #000;
 		@include transition(all ease .4s);
 		@media screen and (min-width: $tabwidth) {
-			padding: 0% 20px;
+			padding: 0% 20px 0% 20px;
 		}
 		@media screen and (min-width: $deskwidth) {
-			padding: 0% 30px;
+			padding: 0% 30px 0% 30px;
 		}
 		&:hover {
 			background-color: rgba(#fff, 1);

@@ -12,45 +12,77 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header(); 
 
-	<div id="primary" class="content-area">
+// Query Homepage
+$post = get_post(33); 
+setup_postdata( $post );
+ 
+	$banner = get_field('main_banner');
+	$text = get_field('search_text');
+ 	$aboutTitle = get_field('about_title');
+ 	$aboutPhoto = get_field('photo');
+ 	$aboutText = get_field('text');
+ 	$aboutlink = get_field('read_more_link');
+
+wp_reset_postdata();
+
+
+?>
+<div class="homebanner">
+	<img src="<?php echo $banner['url'] ?>" alt="<?php echo $banner['alt'] ?>">
+	<section class="searchbox sections">
+		<h2><?php echo $text; ?></h2>
+	</section>
+</div>
+
+<section class="featured-listings sections">
+	<h2>Featured Listings</h2>
+	<?php // put featured listings here. ?>
+</section>
+
+<section class="property-alerts sections">
+	<?php get_template_part('inc/property-alerts'); ?>
+</section>
+	
+<section class="home-latest">
+	<div class="left sections">
+		<h2>Latest</h2>
+		<?php
+			$wp_query = new WP_Query();
+			$wp_query->query(array(
+			'post_type'=>'post',
+			'posts_per_page' => 1
+		));
+			if ($wp_query->have_posts()) : ?>
+		    <?php while ($wp_query->have_posts()) : ?>
+		        
+		    <?php $wp_query->the_post(); ?>	
+		    
+		    <h3><?php the_title(); ?></h3>
+		    	<?php the_excerpt(); ?>
+		    	<div class="btn-full orange-grad">
+		    		<a href="<?php the_permalink(); ?>">READ MORE</a>
+		    	</div>
+		    <?php endwhile; ?>
+		<?php endif; ?>
+	</div>
+	<div class="right sections">
+		<h2><?php echo $aboutTitle; ?></h2>
+		<?php echo $aboutText; ?>
+		<div class="btn-full orange-grad">
+    		<a href="<?php echo $aboutlink; ?>">READ MORE</a>
+    	</div>
+	</div>
+</section>
+
+	<div id="primary" class="content-area ">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
+	
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

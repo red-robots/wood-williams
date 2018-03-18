@@ -26,7 +26,7 @@ div {
 		width: 100%;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
+		width: 90%;
 		padding: 0px;
 	}
 }
@@ -58,35 +58,210 @@ div {
 		/*width: 1200px;*/
 	}
 }
-
+.top-header {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	z-index: 11;
+	padding: 20px;
+	margin: 0 auto;
+	@media screen and (min-width: $tabwidth) {
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		padding: 10px 20px 10px 0 ;
+		align-items: center;
+	}
+	@media screen and (min-width: $tabwidth) {
+		width: 90%;
+		padding: 10px 30px 10px 0 ;
+	}
+	.agentinfo, .socialheader {
+		color: #fff;
+		width: auto;
+		position: relative;
+		z-index: 12;
+		line-height: 1;
+		@media screen and (min-width: $tabwidth) {
+			margin-left: 20px;
+		}
+		
+	}
+	.icon {
+		width: auto;
+		float: left;
+		margin: 0 5px;
+		a {
+			color: #fff;
+		}
+		icon {
+			transform: scale(.9);
+			@include transition(all ease .2s);
+			&:hover {
+				ransform: scale(1);
+			}
+		}
+	}
+}
+header#masthead {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+	background-color: rgba(#fff, .8);
+	@media screen and (min-width: $tabwidth) {
+		height: 70px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+	}
+}
+.flexnav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	@media screen and (min-width: $tabwidth) {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+}
 /* Logo */
 .logo , h1.logo {
-	width: 300px;
-	height: 200px;
-	background-image: url(images/logo.png);	
+	width: 250px;
+	// background-image: url(images/logo.png);	
 	margin: 10px auto;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		height: 200px;
+		width: 200px;
 		float: left;
-		margin: 0;
+		margin: -15px 0 0 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 300px;
+	}
+}
+.logo a, h1.logo a {
+	
+	display: block;
+
+	@media screen and (min-width: $tabwidth) {
+		
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
 	}
 }
-.logo a, h1.logo a {
-	width: 300px;
-	height: 200px;
-	display: block;
-	text-indent: -9000px;
-
+.blue-header {
+	width: 100%;
+	@include blue-grad;
+	padding-bottom: 30px;
 	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		height: 200px;
+		padding-bottom: 30px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
+		padding-bottom: 50px;
+	}
+}
+#primary {
+	width: 100%;
+	margin: 40px 0 ;
+}
+.intro {
+	width: 90%;
+	margin: 0 auto;
+	@media screen and (min-width: $tabwidth) {
+
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 70%;
+	}
+}
+.btn, .btn-full {
+	text-align: center;
+	text-transform: uppercase;
+	a {
+		color: #fff;
+		padding: 10px 0;
+		display: block;
+		@include orange-grad;
+		@include transition(all ease .2s);
+		&:hover {
+			@include orange-grad-reverse;
+		}
+	}
+}
+.btn-full {
+	width: 100%;
+}
+.orange-grad {
+	@include orange-grad;
+}
+footer.site-footer, section.property-alerts {
+	width: 100%;
+	clear: both;
+	padding: 30px 0;
+	@include blue-grad;
+	.social {
+		width: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+		align-content: center;
+		flex-direction: row;
+		justify-content: center;
+		margin: 30px auto;
+		.icon {
+			width: auto;
+			margin: 0 10px;
+			i {
+
+			}
+			a {
+				color: #fff;
+			}
+		}
+	}
+	.footer-agents {
+		width: 100%;
+		color: #fff;
+		text-align: center;
+		font-size: 24px;
+		margin: 30px 0;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 18px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 24px;
+		}
+	}
+	.signups {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		@media screen and (min-width: $tabwidth) {
+			flex-wrap: nowrap;
+			align-items: stretch;
+		}
+		.left, .right {
+			h2 {
+				color: #fff;
+				text-align: center;
+				font-size: 20px;
+			}
+			@media screen and (min-width: $tabwidth) {
+				flex-basis: 50%
+			}
+		}
+		.left {
+
+		}
+		.right {
+
+		}
+	}
+	.bottom {
+		width: 100%;
+		text-align: center;
+		a {
+			color: #fff;
+		}
 	}
 }

@@ -19,23 +19,64 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 
-<?php wp_head(); ?>
+<?php wp_head(); 
+
+// Options
+$scotName = get_field('scot_name', 'option');
+$scotNumber = get_field('scot_number', 'option');
+$scotEmail = get_field('scot_email', 'option');
+$annName = get_field('ann_name', 'option');
+$annNumber = get_field('ann_number', 'option');
+$annEmail = get_field('ann_email', 'option');
+$facebook = get_field('facebook_link', 'option');
+$instagram = get_field('instagram_link', 'option');
+
+?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+
+<?php if( !is_front_page() ) { ?><div class="blue-header"><?php } ?>
+
+	<section class="top-header">
+		<div class="agentinfo">
+			<?php echo $scotName.' '.$scotNumber.' | '.$annName.' '.$annNumber; ?>
+		</div>
+		<div class="socialheader">
+			<?php if( $facebook ) { ?>
+				<div class="icon">
+					<a href="<?php echo $facebook ?>" target="_blank">
+						<i class="fab fa-facebook-f fa-2x"></i>
+					</a>
+				</div>
+			<?php } ?>
+			<?php if( $instagram ) { ?>
+				<div class="icon">
+					<a href="<?php echo $instagram ?>" target="_blank">
+						<i class="fab fa-instagram fa-2x"></i>
+					</a>
+				</div>
+			<?php } ?>
+		</div>
+	</section>
+
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="wrapper">
+		<div class="wrapper flexnav">
 			
 			<?php if(is_home()) { ?>
 	            <h1 class="logo">
-	            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+	            	<a href="<?php bloginfo('url'); ?>">
+	            		<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
+	            	</a>
 	            </h1>
 	        <?php } else { ?>
 	            <div class="logo">
-	            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+	            	<a href="<?php bloginfo('url'); ?>">
+	            		<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
+	            	</a>
 	            </div>
 	        <?php } ?>
 
@@ -46,4 +87,7 @@
 	</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content wrapper">
+
+<?php if( !is_front_page() ) { ?></div><?php } ?>
+
+	<div id="content" class="site-content ">

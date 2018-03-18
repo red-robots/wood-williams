@@ -5,21 +5,21 @@ add_action('init', 'js_custom_init');
 function js_custom_init() 
 {
 	
-	// Register the Homepage Slides
+	// Register the Homepage Agents
   
      $labels = array(
-	'name' => _x('Slides', 'post type general name'),
-    'singular_name' => _x('Slide', 'post type singular name'),
-    'add_new' => _x('Add New', 'Slide'),
-    'add_new_item' => __('Add New Slide'),
-    'edit_item' => __('Edit Slides'),
-    'new_item' => __('New Slide'),
-    'view_item' => __('View Slides'),
-    'search_items' => __('Search Slides'),
-    'not_found' =>  __('No Slides found'),
-    'not_found_in_trash' => __('No Slides found in Trash'), 
+	'name' => _x('Agents', 'post type general name'),
+    'singular_name' => _x('Agent', 'post type singular name'),
+    'add_new' => _x('Add New', 'Agent'),
+    'add_new_item' => __('Add New Agent'),
+    'edit_item' => __('Edit Agents'),
+    'new_item' => __('New Agent'),
+    'view_item' => __('View Agents'),
+    'search_items' => __('Search Agents'),
+    'not_found' =>  __('No Agents found'),
+    'not_found_in_trash' => __('No Agents found in Trash'), 
     'parent_item_colon' => '',
-    'menu_name' => 'Slides'
+    'menu_name' => 'Agents'
   );
   $args = array(
 	'labels' => $labels,
@@ -36,7 +36,7 @@ function js_custom_init()
     'supports' => array('title','editor','custom-fields','thumbnail'),
 	
   ); 
-  register_post_type('slide',$args); // name used in query
+  register_post_type('agent',$args); // name used in query
   
   // Add more between here
   
