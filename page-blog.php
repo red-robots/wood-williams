@@ -24,6 +24,9 @@ get_header(); ?>
 				<?php while ($wp_query->have_posts()) :  $wp_query->the_post(); ?>
 
 					<article class="post">
+					<div class="the-date">
+						<?php the_date('M j'); ?>
+					</div>
 						<header class="post">
 							<h2><?php the_title(); ?></h2>
 						</header>

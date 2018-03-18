@@ -161,8 +161,7 @@ header#masthead {
 		padding-bottom: 50px;
 	}
 }
-#primary {
-	width: 100%;
+#primary, .widget-area {
 	margin: 40px 0 ;
 }
 .intro {
@@ -180,7 +179,6 @@ header#masthead {
 	text-transform: uppercase;
 	a {
 		color: #fff;
-		padding: 10px 0;
 		display: block;
 		@include orange-grad;
 		@include transition(all ease .2s);
@@ -191,9 +189,77 @@ header#masthead {
 }
 .btn-full {
 	width: 100%;
+	a {
+		padding: 10px 0;
+	}
+}
+.btn {
+	width: auto;
+	float: right;
+	a {
+		padding: 10px 20px;
+		transform: scale(1);
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	@include orange-grad;
+	box-shadow: none;
+	border-radius: 0;
+	border: 0;
+	text-shadow: none;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	&:hover {
+		box-shadow: none;
+		@include orange-grad-reverse;
+	}
 }
 .orange-grad {
 	@include orange-grad;
+}
+.sidebar {
+	@include blue-grad-vert;
+	flex-basis: 100%;
+	padding: 2%;
+	color: #fff;
+	@media screen and (min-width: $tabwidth) {
+		flex-basis: 40%;
+	}
+	h2 {
+		font: {
+			size: 20px;
+			weight: normal;
+		}
+		margin: 0 0 20px 0;
+		text-transform: uppercase;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 16px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 22px;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+		a {
+			display: block;
+			color: $color-yellow;
+			padding: 3px;
+			@include transition(all ease .3s);
+			&:hover {
+				background-color: rgba(#fff, .7);
+				color: $color-dark-blue;
+			}
+		}
+	}
 }
 footer.site-footer, section.property-alerts {
 	width: 100%;
