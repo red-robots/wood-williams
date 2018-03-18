@@ -32,8 +32,50 @@ get_header(); ?>
 				<?php endwhile; // End of the loop.
 				?>
 			</section>
+
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>
+<section class="agents sections">
+	<div class="wrapper">
+		<h2 class="a-section">AGENTS</h2>
+			<?php
+				$wp_query = new WP_Query();
+				$wp_query->query(array(
+				'post_type'=>'agent',
+				'posts_per_page' => -1
+			));
+				if ($wp_query->have_posts()) : ?>
+				<section class="agent-wrap">
+				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
+				    	$pic = get_field('photo');
+				    	$phone = get_field('phone');
+				    	$email = get_field('email');
+				    	$spam = antispambot($email);
+				    ?>	
+				    <div class="agent">
+					    <?php if( $pic ) { ?>
+					    	<img src="<?php echo $pic['url']; ?>" alt="<?php echo $pic['alt']; ?>">
+					    <?php } ?>
+					    <section class="info">
+					    	<h2><?php the_title(); ?></h2>
+					    	<div class="email">
+					    		<a href="<?php echo $spam; ?>"><?php echo $spam; ?></a>
+					    	</div>
+					    	<?php if( $phone ) { ?>
+					    		<div class="phone"><?php echo $phone; ?></div>
+					    	<?php } ?>
+					    </section>
+					    <section class="bio">
+					    	<?php the_content(); ?>
+					    </section>
+				    </div>
+				    <?php endwhile; ?>
+			    </section>
+				<?php endif; ?>
+
+	</div>
+</section>	
 <?php
 get_footer();

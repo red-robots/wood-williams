@@ -169,3 +169,59 @@ section.about {
 		}
 	}
 }
+section.agents {
+	width: 100%;
+	background-color: #F4F4F4;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 30px 0;
+	@media screen and (min-width: $tabwidth) {
+
+	}
+	section.agent-wrap {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: stretch;
+		@media screen and (min-width: $tabwidth) {
+
+		}
+	}
+	h2.a-section {
+		text-align: center;
+		color: $color-dark-blue;
+		margin-bottom: 40px;
+	}
+	.agent {
+		flex-basis: 100%;
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: 45%;
+		}
+		h2 {
+			text-align: left;
+			margin: 0;
+			font-size: 20px;
+			@media screen and (min-width: $tabwidth) {
+				font-size: 16px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 20px;
+			}
+		}
+	}
+	.info {
+		width: 96%;
+		border-left: 5px solid $color-dark-blue;
+		padding-left: 15px;
+		margin: 10px 0 20px 0;
+	}
+	.bio {
+		width: 100%;
+
+	}
+}
