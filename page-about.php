@@ -44,7 +44,8 @@ get_header(); ?>
 				$wp_query = new WP_Query();
 				$wp_query->query(array(
 				'post_type'=>'agent',
-				'posts_per_page' => -1
+				'posts_per_page' => -1,
+				'order' => 'menu_order'
 			));
 				if ($wp_query->have_posts()) : ?>
 				<section class="agent-wrap">
@@ -53,10 +54,13 @@ get_header(); ?>
 				    	$phone = get_field('phone');
 				    	$email = get_field('email');
 				    	$spam = antispambot($email);
+				    	// echo '<pre>';
+				    	// print_r($pic);
+				    	// echo '</pre>';
 				    ?>	
 				    <div class="agent">
 					    <?php if( $pic ) { ?>
-					    	<img src="<?php echo $pic['url']; ?>" alt="<?php echo $pic['alt']; ?>">
+					    	<img src="<?php echo $pic['sizes']['agent']; ?>" alt="<?php echo $pic['alt']; ?>">
 					    <?php } ?>
 					    <section class="info">
 					    	<h2><?php the_title(); ?></h2>

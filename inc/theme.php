@@ -8,6 +8,9 @@
  */
 // for dev
 show_admin_bar(false);
+
+add_image_size('agent', 700, 700, array('center', 'center'));
+
 /*-------------------------------------
 	Custom client login, link and title.
 ---------------------------------------*/
