@@ -17,32 +17,53 @@ get_header();
 // Query Homepage
 $post = get_post(33); 
 setup_postdata( $post );
- 
-	$banner = get_field('main_banner');
-	$text = get_field('search_text');
- 	$aboutTitle = get_field('about_title');
- 	$aboutPhoto = get_field('photo');
- 	$aboutText = get_field('text');
- 	$aboutlink = get_field('read_more_link');
 
-wp_reset_postdata();
+ 	if(have_rows('slides')) : ?>
+<div class="homebanner">
+	<div class="flexslider">
+        <ul class="slides">
+       		<?php  while( have_rows('slides') ) : the_row();
+				$banner = get_sub_field('image');
+				$title = get_sub_field('title');
+				$subtitle = get_sub_field('subtitle');
+				$link = get_sub_field('link');
 
 
-?>
-<div class="homebanner" style="background-image: url(<?php echo $banner['url'] ?>);">
-	<!-- <img src="<?php echo $banner['url'] ?>" alt="<?php echo $banner['alt'] ?>"> -->
-	<section class="searchbox sections">
-		<h2><?php echo $text; ?></h2>
-	</section>
+			 	$aboutTitle = get_field('about_title');
+			 	$aboutPhoto = get_field('photo');
+			 	$aboutText = get_field('text');
+			 	$aboutlink = get_field('read_more_link');
+			?>
+            <li style="background-image: url(<?php echo $banner['url']; ?>);">
+				
+				<section class="searchbox sections">
+					<h2><?php echo $title; ?></h2>
+					<h3><?php echo $subtitle; ?></h3>
+				</section>
+			</li>
+		
+<?php 
+
+endwhile;?>
+		</ul>
+		<div class="quicksearch-home"><?php dynamic_sidebar( 'quick-search' ); ?></div>
+		
+	</div>
 </div>
+<?php
+endif;
+wp_reset_postdata(); ?>
+
 
 <section class="featured-listings sections">
-	<h2>Featured Listings</h2>
-	<?php // put featured listings here. ?>
+	<!-- <h2>Featured Listings</h2> -->
+	<div class="wrapper"><?php dynamic_sidebar( 'featured-listings' ); ?></div>
+	
 </section>
 
 <section class="property-alerts sections">
-	<?php get_template_part('inc/property-alerts'); ?>
+	<?php //get_template_part('inc/property-alerts'); ?>
+	<div class="wrapper"><?php dynamic_sidebar( 'property-alerts' ); ?></div>
 </section>
 	
 <section class="home-latest">
@@ -58,10 +79,11 @@ wp_reset_postdata();
 		    <?php while ($wp_query->have_posts()) : ?>
 		        
 		    <?php $wp_query->the_post(); ?>	
-		    
-		    <h3><?php the_title(); ?></h3>
+		    <div class="blogstuff">
+		   		<h3><?php the_title(); ?></h3>
 		    	<?php the_excerpt(); ?>
-		    	<div class="btn-full orange-grad">
+		    </div>
+		    	<div class="btn-full orange-grad bottom">
 		    		<a href="<?php the_permalink(); ?>">READ MORE</a>
 		    	</div>
 		    <?php endwhile; ?>
@@ -69,8 +91,13 @@ wp_reset_postdata();
 	</div>
 	<div class="right sections">
 		<h2><?php echo $aboutTitle; ?></h2>
+		<?php if($aboutPhoto) { ?>
+			<div class="photo">
+				<img src="<?php echo $aboutPhoto['url']; ?>" alt="<?php echo $aboutPhoto['alt']; ?>">
+			</div>
+		<?php } ?>
 		<?php echo $aboutText; ?>
-		<div class="btn-full orange-grad">
+		<div class="btn-full orange-grad bottom">
     		<a href="<?php echo $aboutlink; ?>">READ MORE</a>
     	</div>
 	</div>

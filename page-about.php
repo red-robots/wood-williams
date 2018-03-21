@@ -13,14 +13,21 @@ get_header(); ?>
 		<main id="main" class="site-main about" role="main">
 			<section class="about">
 				<?php
-				while ( have_posts() ) : the_post(); ?>
+				while ( have_posts() ) : the_post(); 
 
+				$image = get_field('top_image');
+				?>
 
 					<article class="about">
 						<header class="entry-header">
 							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 						</header><!-- .entry-header -->
 						<div class="entry-content">
+							<?php if( $image ) { ?>
+								<div class="about-image">
+									<img src="<?php echo $image['url']; ?>">
+								</div>
+							<?php } ?>
 							<?php the_content(); ?>
 						</div><!-- .entry-content -->
 					</article>
@@ -52,6 +59,7 @@ get_header(); ?>
 				    <?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
 				    	$pic = get_field('photo');
 				    	$phone = get_field('phone');
+				    	$title = get_field('title');
 				    	$email = get_field('email');
 				    	$spam = antispambot($email);
 				    	// echo '<pre>';
@@ -64,6 +72,9 @@ get_header(); ?>
 					    <?php } ?>
 					    <section class="info">
 					    	<h2><?php the_title(); ?></h2>
+					    	<?php if($title) { ?>
+					    		<div class="title"><?php echo $title; ?></div>
+					    	<?php } ?>
 					    	<div class="email">
 					    		<a href="<?php echo $spam; ?>"><?php echo $spam; ?></a>
 					    	</div>

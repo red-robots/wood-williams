@@ -51,12 +51,60 @@
 	@media screen and (min-width: $deskwidth) {
 		margin-top: -130px;
 	}
+	.quicksearch-home {
+		width: 86%;
+		position: absolute; 
+		bottom: 0;
+		left: 7%;
+		z-index: 10001;
+		h2 {
+			display: none;
+		}
+		#IDX-quicksearch-8823 {
+			width: 100%;
+		}
+		.IDX-quicksearchForm {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 0;
+			border: 1px solid #fff;
+			border-radius: 0;
+			@media screen and (min-width: $midwidth) {
+				color: #fff;
+			}
+			.IDX-quicksearchWrapper, #IDX-quicksearch-8823 {
+				border: 0;
+				box-shadow: none;
+			}
+			.IDX-qsLabel, IDX-qsInput IDX-qsTextInput {
+				width: 100%;
+				padding: 5px;
+				margin: 0;
+				text-align: left;
+			}
+			.IDX-qsTextInput {
+				width: 100%;
+			}
+			
+		}
+		
+	}
 }
+#IDX-quicksearch-8823 {
+	box-shadow: none !important;
+	border: 0 !important;
+	label {
+		margin: 5px 0 10px 0 !important;
+	}
+}
+
 section.searchbox {
 	background-color: rgba(#000, .8);
 	color: #fff;
 	text-align: center;
-	padding: 20px;
+	padding: 20px 20px 150px 20px;
 	width: 100%;
 	position: absolute;
 	bottom: 0;
@@ -69,9 +117,19 @@ section.searchbox {
 	@media screen and (min-width: $deskwidth) {
 		width: 90%;
 	}
-	h2 {
+	h2, h3 {
 		color: #fff;
+		
+		width: 100%;
+		position: relative;
+		z-index: 1000;
+	}
+	h2 {
 		font-style: italic;
+		font-size: 30px;
+	}
+	h3 {
+		font-size: 20px;
 	}
 	
 }
@@ -106,6 +164,11 @@ section.property-alerts {
 	h2 {
 		color: #fff;
 	}
+	#LeadSignup {
+		width: 100%;
+		border: 0;
+		box-shadow: none;
+	}
 }
 section.home-latest {
 	width: 100%;
@@ -117,6 +180,15 @@ section.home-latest {
 	}
 	.left, .right {
 		padding: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media screen and (min-width: $tabwidth) {
+
+		}
+		.bottom {
+			// align-self: flex-end;
+		}
 	}
 	.left {
 		flex-basis: 50%;
@@ -124,6 +196,9 @@ section.home-latest {
 	.right {
 		flex-basis: 50%;
 		background-color: #F4F4F4;
+		.photo {
+			margin: 0 0 20px 0;
+		}
 	}
 }
 section.about {
@@ -133,10 +208,17 @@ section.about {
 	@media screen and (min-width: $tabwidth) {
 		flex-wrap: nowrap;
 	}
+	.about-image {
+		width: 100%;
+		margin: 0 0 30px 0;
+		img {
+			width: 100%;
+		}
+	}
 	.cta-about {
 		
 		flex-basis: 100%;
-		
+		margin-top: 70px;
 		@media screen and (min-width: $tabwidth) {
 			flex-basis: 35%;
 		}
@@ -236,8 +318,8 @@ section.agents {
 			@include boxshadow-hover;
 		}
 		h2 {
-			text-align: left;
-			margin: 0 0 15px 0;
+			text-align: center;
+			margin: 0 0 0px 0;
 			font-size: 20px;
 			@media screen and (min-width: $tabwidth) {
 				font-size: 16px;
@@ -255,10 +337,17 @@ section.agents {
 		// border-left: 5px solid $color-dark-blue;
 		// padding-left: 15px;
 		margin: 20px auto 20px auto;
+		text-align: center;
+	}
+	.title {
+		font-style: italic;
+		@media screen and (min-width: $tabwidth) {
+
+		}
 	}
 	.email {
 		width: 100%;
-		margin-bottom: 10px;
+		margin: 10px 0;
 		display: none;
 		@media screen and (min-width: $tabwidth) {
 			display: block;
