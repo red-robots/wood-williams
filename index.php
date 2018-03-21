@@ -29,8 +29,8 @@ wp_reset_postdata();
 
 
 ?>
-<div class="homebanner">
-	<img src="<?php echo $banner['url'] ?>" alt="<?php echo $banner['alt'] ?>">
+<div class="homebanner" style="background-image: url(<?php echo $banner['url'] ?>);">
+	<!-- <img src="<?php echo $banner['url'] ?>" alt="<?php echo $banner['alt'] ?>"> -->
 	<section class="searchbox sections">
 		<h2><?php echo $text; ?></h2>
 	</section>

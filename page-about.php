@@ -67,13 +67,19 @@ get_header(); ?>
 					    	<div class="email">
 					    		<a href="<?php echo $spam; ?>"><?php echo $spam; ?></a>
 					    	</div>
+					    	<div class="email-mobile">
+					    		<a href="<?php echo $spam; ?>"><i class="fal fa-envelope fa-lg"></i></a>
+					    	</div>
 					    	<?php if( $phone ) { ?>
 					    		<div class="phone"><?php echo $phone; ?></div>
 					    	<?php } ?>
+					    	<div class="btn-full">
+					    		<a href="<?php the_permalink(); ?>">VIEW BIO</a>
+					    	</div>
 					    </section>
-					    <section class="bio">
+					    <!-- <section class="bio">
 					    	<?php the_content(); ?>
-					    </section>
+					    </section> -->
 				    </div>
 				    <?php endwhile; ?>
 			    </section>

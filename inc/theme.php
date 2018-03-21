@@ -11,6 +11,8 @@ show_admin_bar(false);
 
 add_image_size('agent', 700, 700, array('center', 'center'));
 
+add_filter('jpeg_quality', function($arg){return 100;});
+
 /*-------------------------------------
 	Custom client login, link and title.
 ---------------------------------------*/
