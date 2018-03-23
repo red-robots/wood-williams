@@ -69,13 +69,13 @@ $instagram = get_field('instagram_link', 'option');
 			<?php if(is_home()) { ?>
 	            <h1 class="logo">
 	            	<a href="<?php bloginfo('url'); ?>">
-	            		<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
+	            		<img src="<?php bloginfo('template_url'); ?>/images/logo.jpg" alt="<?php bloginfo('name'); ?>">
 	            	</a>
 	            </h1>
 	        <?php } else { ?>
 	            <div class="logo">
 	            	<a href="<?php bloginfo('url'); ?>">
-	            		<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
+	            		<img src="<?php bloginfo('template_url'); ?>/images/logo.jpg" alt="<?php bloginfo('name'); ?>">
 	            	</a>
 	            </div>
 	        <?php } ?>

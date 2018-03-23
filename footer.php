@@ -47,7 +47,10 @@ $instagram = get_field('instagram_link', 'option');
 
 		<section class="signups">
 			<div class="left sections">
-				<h2>SIGN UP FOR PROPERTY ALERTS</h2>
+				<div class="pa-form-wrapper">
+					<?php //get_template_part('inc/property-alerts'); ?>
+					<?php dynamic_sidebar( 'property-alerts' ); ?>
+				</div>
 			</div>
 			<div class="right sections">
 				<h2>SIGN UP FOR OUR NEWSLETTER</h2>

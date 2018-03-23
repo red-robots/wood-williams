@@ -61,11 +61,17 @@ wp_reset_postdata(); ?>
 	
 </section>
 
+
 <section class="property-alerts sections">
-	<?php //get_template_part('inc/property-alerts'); ?>
-	<div class="wrapper"><?php dynamic_sidebar( 'property-alerts' ); ?></div>
+	<div class="wrapper">
+		<div class="pa-form-wrapper">
+			<?php //get_template_part('inc/property-alerts'); ?>
+			<?php dynamic_sidebar( 'property-alerts' ); ?>
+		</div>
+	</div>	
 </section>
-	
+
+
 <section class="home-latest">
 	<div class="left sections">
 		<h2>Latest</h2>
