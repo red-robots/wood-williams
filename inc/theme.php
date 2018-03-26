@@ -179,3 +179,22 @@ function ac_first_and_last_menu_class($items) {
   return $items;
 }
 add_filter('wp_nav_menu_objects', 'ac_first_and_last_menu_class');
+
+/*-------------------------------------
+  Fallback for no featured image. 
+  Will grab first image in post.
+---------------------------------------*/
+function catch_that_image() {
+global $post, $posts;
+$first_img = '';
+ob_start();
+ob_end_clean();
+if(preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches)){
+$first_img = $matches[1][0];
+return $first_img;
+}
+else {
+$first_img = get_template_directory_uri()."/images/default.png";
+return $first_img;
+}
+}

@@ -45,16 +45,23 @@ $instagram = get_field('instagram_link', 'option');
 			<?php echo $scotName.' '.$scotNumber.' | '.$annName.' '.$annNumber; ?>
 		</section>
 
-		<section class="signups">
-			<div class="left sections">
+		<section class="signups sections">
+			<div class="property-alerts">
 				<div class="pa-form-wrapper">
 					<?php //get_template_part('inc/property-alerts'); ?>
 					<?php dynamic_sidebar( 'property-alerts' ); ?>
 				</div>
 			</div>
-			<div class="right sections">
+
+			<div class="newsletter-signup">
 				<h2>SIGN UP FOR OUR NEWSLETTER</h2>
+				<!-- Begin Constant Contact Inline Form Code -->
+				<div class="ctct-inline-form" data-form-id="f72a271e-0ee2-4be9-8114-a81a3d3ffcf5"></div>
+				<!-- End Constant Contact Inline Form Code -->
 			</div>
+			
+				
+			
 		</section>
 
 		<div class="bottom">
@@ -66,6 +73,9 @@ $instagram = get_field('instagram_link', 'option');
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<!-- Begin Constant Contact Active Forms -->
+<script> var _ctct_m = "d374fbbe4aee7c3ef9b6a4934cb5e873"; </script>
+<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+<!-- End Constant Contact Active Forms -->
 </body>
 </html>

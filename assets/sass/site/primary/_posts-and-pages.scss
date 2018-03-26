@@ -529,4 +529,26 @@ article.post {
 		top: 0;
 		left: 0;
 	}
+	.blogpost {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		.img {
+			flex-basis: 100%;
+			@media screen and (min-width: $tabwidth) {
+				flex-basis: 25%;
+				margin-top: 20px;
+			}
+			img {
+				width: 100%;
+			}
+		}
+		.content {
+			flex-basis: 100%;
+			@media screen and (min-width: $tabwidth) {
+				flex-basis:70%;
+			}
+		}
+	}
 }

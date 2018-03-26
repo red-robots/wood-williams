@@ -21,16 +21,37 @@ get_header(); ?>
 			));
 				if ($wp_query->have_posts()) : ?>
 
-				<?php while ($wp_query->have_posts()) :  $wp_query->the_post(); ?>
+				<?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
+
+					$img = catch_that_image();
+
+					// echo '<pre>';
+					// print_r($img);
+					// echo '</pre>';
+
+				?>
 
 					<article class="post">
-					<div class="the-date">
-						<?php the_date('M j'); ?>
-					</div>
-						<header class="post">
-							<h2><?php the_title(); ?></h2>
-						</header>
-						<div class="excerpt"><?php the_excerpt(); ?></div>
+						<div class="the-date">
+							<?php the_date('M j'); ?>
+						</div>
+						<div class="blogpost">
+							<div class="img">
+							<?php 
+							if( has_post_thumbnail() ) {
+								the_post_thumbnail();
+							} elseif( $img ) { ?>
+								<img src="<?php echo $img; ?>">
+							<?php } ?>
+							</div>
+							<div class="content">
+								<header class="post">
+									<h2><?php the_title(); ?></h2>
+								</header>
+									<div class="excerpt"><?php the_excerpt(); ?></div>
+								</div>
+							</div>
+						
 						<div class="btn">
 							<a href="<?php the_permalink(); ?>">READ MORE</a>
 						</div>
