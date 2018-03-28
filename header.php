@@ -19,6 +19,13 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 
+<script type="text/javascript" src="//d1qfrurkpai25r.cloudfront.net/graphical/javascript/leaflet.js"></script>
+<script type="text/javascript" src="//d1qfrurkpai25r.cloudfront.net/graphical/frontend/javascript/maps/plugins/leaflet.draw.js"></script>
+<script type="text/javascript" src="//www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=Gmjtd%7Cluub2h0rn0%2Crx%…"></script>
+<link rel="stylesheet" href="//d1qfrurkpai25r.cloudfront.net/graphical/css/leaflet-1.000.css" /> 
+<link rel="stylesheet" href="//d1qfrurkpai25r.cloudfront.net/graphical/css/leaflet.label.css" /> 
+
+
 <?php wp_head(); 
 
 // Options
