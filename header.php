@@ -23,7 +23,7 @@
 <script type="text/javascript" src="//d1qfrurkpai25r.cloudfront.net/graphical/frontend/javascript/maps/plugins/leaflet.draw.js"></script>
 <script type="text/javascript" src="//www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=Gmjtd%7Cluub2h0rn0%2Crx%3Do5-lz1nh"></script>
 
-<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-44955" src="//www.scotwilliamsrealty.idxbroker.com/idx/mapwidgetjs.php?widgetid=44955"></script>
+
 
 
 <?php wp_head(); 
