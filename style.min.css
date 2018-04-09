@@ -814,29 +814,31 @@ button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="su
 .sidebar li{list-style-type:none}
 .sidebar li a{display:block;color:#ffba00;padding:3px;-webkit-transition:all ease .3s;transition:all ease .3s}
 .sidebar li a:hover{background-color:rgba(255,255,255,0.7);color:#00486f}
-footer.site-footer,section.property-alerts{width:100%;clear:both;padding:30px 0;background:-webkit-linear-gradient(left,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);background:linear-gradient(to right,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00486f',endColorstr='#000077ba',GradientType=0)}
+.signups-pa,.creds{background-color:#00486f}
+.signups-newsletter{background:-webkit-linear-gradient(left,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);background:linear-gradient(to right,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00486f',endColorstr='#000077ba',GradientType=0);padding:40px 0;color:#fff}
+footer.site-footer,section.property-alerts{width:100%;clear:both;padding:30px 0 0 0;background:-webkit-linear-gradient(left,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);background:linear-gradient(to right,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00486f',endColorstr='#000077ba',GradientType=0)}
 footer.site-footer .social,section.property-alerts .social{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:30px auto}
 footer.site-footer .social .icon,section.property-alerts .social .icon{width:auto;margin:0 10px}
 footer.site-footer .social .icon a,section.property-alerts .social .icon a{color:#fff}
 footer.site-footer .footer-agents,section.property-alerts .footer-agents{width:100%;color:#fff;text-align:center;font-size:24px;margin:30px 0}
 @media screen and (min-width:600px){footer.site-footer .footer-agents,section.property-alerts .footer-agents{font-size:18px}
 }@media screen and (min-width:1200px){footer.site-footer .footer-agents,section.property-alerts .footer-agents{font-size:24px}
-}footer.site-footer .signups,section.property-alerts .signups{width:100%}
-footer.site-footer .signups .property-alerts,section.property-alerts .signups .property-alerts{width:100%;overflow:hidden;margin:40px auto;clear:both}
-footer.site-footer .signups .property-alerts h2,section.property-alerts .signups .property-alerts h2{color:#fff;text-align:center;font-size:20px}
-@media screen and (min-width:600px){footer.site-footer .signups .property-alerts,section.property-alerts .signups .property-alerts{width:80%}
-}@media screen and (min-width:1200px){footer.site-footer .signups .property-alerts,section.property-alerts .signups .property-alerts{width:40%}
-}footer.site-footer .signups .newsletter-signup,section.property-alerts .signups .newsletter-signup{width:100%;text-align:center;margin:20px auto}
-@media screen and (min-width:600px){footer.site-footer .signups .newsletter-signup,section.property-alerts .signups .newsletter-signup{width:50%}
-}@media screen and (min-width:1200px){footer.site-footer .signups .newsletter-signup,section.property-alerts .signups .newsletter-signup{width:30%}
-}footer.site-footer .signups .newsletter-signup h2,section.property-alerts .signups .newsletter-signup h2{color:#fff;text-align:center;font-size:20px}
-footer.site-footer .signups .newsletter-signup .ctct-form-defaults,section.property-alerts .signups .newsletter-signup .ctct-form-defaults{padding:0;color:#fff}
-footer.site-footer .signups .newsletter-signup .ctct-form-embed.form_0 .ctct-form-defaults,section.property-alerts .signups .newsletter-signup .ctct-form-embed.form_0 .ctct-form-defaults{background-color:rgba(255,255,255,0)}
-footer.site-footer .signups .newsletter-signup .ctct-form-header,footer.site-footer .signups .newsletter-signup .ctct-form-footer,section.property-alerts .signups .newsletter-signup .ctct-form-header,section.property-alerts .signups .newsletter-signup .ctct-form-footer{display:none}
-footer.site-footer .signups .newsletter-signup .ctct-form-element,footer.site-footer .signups .newsletter-signup .ctct-form-button,section.property-alerts .signups .newsletter-signup .ctct-form-element,section.property-alerts .signups .newsletter-signup .ctct-form-button{padding:10px;height:auto}
-footer.site-footer .signups .newsletter-signup .ctct-form-text,section.property-alerts .signups .newsletter-signup .ctct-form-text{color:#fff}
-footer.site-footer .bottom,section.property-alerts .bottom{width:100%;text-align:center}
+}footer.site-footer .bottom,section.property-alerts .bottom{width:100%;text-align:center}
 footer.site-footer .bottom a,section.property-alerts .bottom a{color:#fff}
+.signups{width:100%}
+.signups .property-alerts{width:100%;overflow:hidden;margin:0 auto;padding:40px 0;clear:both}
+.signups .property-alerts h2{color:#fff;text-align:center;font-size:20px}
+@media screen and (min-width:600px){.signups .property-alerts{width:80%}
+}@media screen and (min-width:1200px){.signups .property-alerts{width:40%}
+}.signups .newsletter-signup{width:100%;text-align:center;margin:20px auto}
+@media screen and (min-width:600px){.signups .newsletter-signup{width:50%}
+}@media screen and (min-width:1200px){.signups .newsletter-signup{width:30%}
+}.signups .newsletter-signup h2{color:#fff;text-align:center;font-size:20px}
+.signups .newsletter-signup .ctct-form-defaults{padding:0;color:#fff}
+.signups .newsletter-signup .ctct-form-embed.form_0 .ctct-form-defaults{background-color:rgba(255,255,255,0)}
+.signups .newsletter-signup .ctct-form-header,.signups .newsletter-signup .ctct-form-footer{display:none}
+.signups .newsletter-signup .ctct-form-element,.signups .newsletter-signup .ctct-form-button{padding:10px;height:auto}
+.signups .newsletter-signup .ctct-form-text{color:#fff}
 section.signups .impress-lead-signup{width:100%;margin:0 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
 @media screen and (min-width:600px){section.signups .impress-lead-signup{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;width:100%;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch}
 }@media screen and (min-width:900px){section.signups .impress-lead-signup{width:100%}

@@ -45,31 +45,48 @@ $instagram = get_field('instagram_link', 'option');
 			<?php echo $scotName.' '.$scotNumber.' | '.$annName.' '.$annNumber; ?>
 		</section>
 
-		<section class="signups sections">
-			<div class="property-alerts">
-				<div class="pa-form-wrapper">
-					<?php //get_template_part('inc/property-alerts'); ?>
-					<?php dynamic_sidebar( 'property-alerts' ); ?>
+		
+
+		
+
+	</div><!-- wrapper -->
+
+		<section class="signups sections signups-pa">
+			<div class="wrapper">
+				<div class="property-alerts">
+					<div class="pa-form-wrapper">
+						<?php //get_template_part('inc/property-alerts'); ?>
+						<?php dynamic_sidebar( 'property-alerts' ); ?>
+					</div>
 				</div>
 			</div>
 
-			<div class="newsletter-signup">
-				<h2>SIGN UP FOR OUR NEWSLETTER</h2>
-				<!-- Begin Constant Contact Inline Form Code -->
-				<div class="ctct-inline-form" data-form-id="f72a271e-0ee2-4be9-8114-a81a3d3ffcf5"></div>
-				<!-- End Constant Contact Inline Form Code -->
-			</div>
 			
-				
 			
 		</section>
 
-		<div class="bottom">
-			<a href="<?php bloginfo('url'); ?>/sitemap">sitemap</a>
-		</div>
-
-	</div><!-- wrapper -->
+		
+		
 	</footer><!-- #colophon -->
+
+	<section class="signups sections signups-newsletter">
+			<div class="wrapper">
+				<div class="newsletter-signup ">
+					<h2>SIGN UP FOR OUR NEWSLETTER</h2>
+					<!-- Begin Constant Contact Inline Form Code -->
+					<div class="ctct-inline-form" data-form-id="f72a271e-0ee2-4be9-8114-a81a3d3ffcf5"></div>
+					<!-- End Constant Contact Inline Form Code -->
+				</div>
+			</div>
+		</section>
+		<section class="sections creds">
+			<div class="wrapper">
+				<div class="bottom">
+					<a href="<?php bloginfo('url'); ?>/sitemap">sitemap</a>
+				</div>
+			</div>
+		</section>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

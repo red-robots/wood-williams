@@ -285,10 +285,18 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 		}
 	}
 }
+.signups-pa, .creds {
+	background-color: $color-dark-blue;
+}
+.signups-newsletter {
+	@include blue-grad;
+	padding: 40px 0;
+	color: #fff;
+}
 footer.site-footer, section.property-alerts {
 	width: 100%;
 	clear: both;
-	padding: 30px 0;
+	padding: 30px 0 0 0;
 	@include blue-grad;
 	.social {
 		width: 100%;
@@ -322,85 +330,87 @@ footer.site-footer, section.property-alerts {
 			font-size: 24px;
 		}
 	}
-	.signups {
-		width: 100%;
-		// display: flex;
-		// flex-wrap: wrap;
-		@media screen and (min-width: $tabwidth) {
-			// flex-wrap: nowrap;
-			// align-items: stretch;
-		}
-		.property-alerts{
-			width: 100%;
-			overflow: hidden;
-			margin: 40px auto;
-			clear: both;
-			h2 {
-				color: #fff;
-				text-align: center;
-				font-size: 20px;
-			}
-			@media screen and (min-width: $tabwidth) {
-				width: 80%;
-			}
-			@media screen and (min-width: $deskwidth) {
-				width: 40%;
-			}
-		}
-		.newsletter-signup {
-			width: 100%;
-			text-align: center;
-			margin: 20px auto;
-			@media screen and (min-width: $tabwidth) {
-				width: 50%;
-			}
-			@media screen and (min-width: $deskwidth) {
-				width: 30%;
-			}
-			h2 {
-				color: #fff;
-				text-align: center;
-				font-size: 20px;
-			}
-			@media screen and (min-width: $tabwidth) {
-				// flex-basis: 50%
-			}
-			.ctct-form-defaults {
-				padding: 0;
-				color: #fff;
-			}
-			.ctct-form-custom {
-				// display: flex; 
-				// justify-content: space-between;
-			}
-			.ctct-form-embed.form_0 .ctct-form-defaults {
-				background-color: rgba(#fff, 0);
-			}
-			.ctct-form-header, .ctct-form-footer {
-				display: none;
-			}
-			.ctct-form-element,
-			.ctct-form-button {
-				padding: 10px;
-				height: auto;
-			}
-			.ctct-form-text {
-				color: #fff;
-			}
-		}
-		.left {
-
-		}
-		.right {
-
-		}
-	}
+	
 	.bottom {
 		width: 100%;
 		text-align: center;
 		a {
 			color: #fff;
 		}
+	}
+}
+.signups {
+	width: 100%;
+	// display: flex;
+	// flex-wrap: wrap;
+	@media screen and (min-width: $tabwidth) {
+		// flex-wrap: nowrap;
+		// align-items: stretch;
+	}
+	.property-alerts{
+		width: 100%;
+		overflow: hidden;
+		margin: 0px auto;
+		padding: 40px 0;
+		clear: both;
+		h2 {
+			color: #fff;
+			text-align: center;
+			font-size: 20px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			width: 80%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 40%;
+		}
+	}
+	.newsletter-signup {
+		width: 100%;
+		text-align: center;
+		margin: 20px auto;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 30%;
+		}
+		h2 {
+			color: #fff;
+			text-align: center;
+			font-size: 20px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			// flex-basis: 50%
+		}
+		.ctct-form-defaults {
+			padding: 0;
+			color: #fff;
+		}
+		.ctct-form-custom {
+			// display: flex; 
+			// justify-content: space-between;
+		}
+		.ctct-form-embed.form_0 .ctct-form-defaults {
+			background-color: rgba(#fff, 0);
+		}
+		.ctct-form-header, .ctct-form-footer {
+			display: none;
+		}
+		.ctct-form-element,
+		.ctct-form-button {
+			padding: 10px;
+			height: auto;
+		}
+		.ctct-form-text {
+			color: #fff;
+		}
+	}
+	.left {
+
+	}
+	.right {
+
 	}
 }
 section.signups {
