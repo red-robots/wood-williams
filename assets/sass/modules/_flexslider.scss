@@ -35,6 +35,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  background-size: contain;
+  @media screen and (min-width: $tabwidth) {
+
+  }
 }
 .flex-pauseplay span {
   text-transform: capitalize;
@@ -52,7 +56,7 @@
 .flexslider-f .slides > li {
   display: none;
   -webkit-backface-visibility: hidden;
-  height: 100vh;
+  // height: 100vh;
   background-size: cover;
   position: relative;
 }
@@ -99,6 +103,7 @@ html[xmlns] .flexslider-f .slides {
   -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
   -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+
 }
 .flexslider .slides,
 .flexslider-f .slides {
@@ -128,7 +133,7 @@ html[xmlns] .flexslider-f .slides {
 .flex-direction-nav a {
   text-decoration: none;
   display: block;
-  width: 40px;
+  width: 60px;
   height: 50px;
   margin: -20px 0 0;
   position: absolute;
@@ -144,6 +149,7 @@ html[xmlns] .flexslider-f .slides {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  display: none;
 }
 .flex-direction-nav a:before {
   font-family: "flexslider-icon";

@@ -23,7 +23,8 @@ div {
 	padding: 20px;
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 100%;
+		width: 90%;
+		padding: 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: 90%;
@@ -58,6 +59,10 @@ div {
 		/*width: 1200px;*/
 	}
 }
+#content {
+	width: 100%;
+	float: left;
+}
 .top-header {
 	width: 100%;
 	display: flex;
@@ -69,7 +74,7 @@ div {
 	@media screen and (min-width: $tabwidth) {
 		flex-wrap: nowrap;
 		justify-content: flex-end;
-		padding: 10px 20px 10px 0 ;
+		padding: 10px 0px 10px 0 ;
 		align-items: center;
 	}
 	@media screen and (min-width: $tabwidth) {
@@ -109,10 +114,10 @@ header#masthead {
 	z-index: 10;
 	background-color: rgba(#fff, .8);
 	@media screen and (min-width: $tabwidth) {
-		height: 70px;
+		height: 40px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		
+		height: 70px;
 	}
 }
 .flexnav {

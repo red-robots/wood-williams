@@ -61,6 +61,7 @@ jQuery(document).ready(function ($) {
 	      animation: "slide",
 	      animationLoop: false,
 	      itemWidth: 210,
+	      smoothHeight: false,
 	      itemMargin: 5,
 	      minItems: getGridSize(), // use function to pull in initial value
 	      maxItems: getGridSize() // use function to pull in initial value

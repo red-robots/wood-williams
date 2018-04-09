@@ -35,7 +35,7 @@
 .homebanner {
 	width: 100%;
 	position: relative;
-	height: 100vh;
+	float: left;
 	background-size: cover;
 	z-index: 1;
 	line-height: 0;
@@ -44,6 +44,7 @@
 	}
 	@media screen and (min-width: $tabwidth) {
 		margin-top: -130px;
+		// height: 100vh;
 	}
 	@media screen and (min-width: $midwidth) {
 		margin-top: -130px;
@@ -52,11 +53,16 @@
 		margin-top: -130px;
 	}
 	.quicksearch-home {
-		width: 86%;
-		position: absolute; 
-		bottom: 0;
-		left: 7%;
+		width: 100%;
+		position: relative; 
+		float: left;
 		z-index: 10001;
+		@media screen and (min-width: $midwidth) {
+			width: 86%;
+			position: absolute; 
+			bottom: 80px;
+			left: 7%;
+		}
 		h2 {
 			display: none;
 		}
@@ -71,8 +77,16 @@
 			padding: 20px 0;
 			border: 1px solid #fff;
 			border-radius: 0;
+			flex-wrap: wrap;
+			color: #fff;
+			background-color: rgba(#000,.8);
+			@media screen and (min-width: $tabwidth) {
+				flex-wrap: nowrap;
+			}
 			@media screen and (min-width: $midwidth) {
 				color: #fff;
+				background-color: rgba(#000,0);
+
 			}
 			.IDX-quicksearchWrapper, #IDX-quicksearch-8823 {
 				border: 0;
@@ -104,15 +118,17 @@ section.searchbox {
 	background-color: rgba(#000, .8);
 	color: #fff;
 	text-align: center;
-	padding: 20px 20px 150px 20px;
+	padding: 20px 20px 20px 20px;
 	width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 5%;
+	position: relative;
+	float: left;
 	z-index: 20;
 	line-height: 1;
-	@media screen and (min-width: $tabwidth) {
-		
+	@media screen and (min-width: $midwidth) {
+		position: absolute;
+		bottom: 0;
+		left: 5%;
+		padding: 20px 20px 150px 20px;
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: 90%;
@@ -136,7 +152,7 @@ section.searchbox {
 .sections {
 	h2 {
 		font: {
-			size: 30px;
+			size: 24px;
 			weight: normal;
 		}
 		text-transform: uppercase;
@@ -156,7 +172,43 @@ section.featured-listings {
 		color: $color-dark-blue;
 		text-align: center;
 	}
+	#IDX-showcaseGallery-8826 {
+		width: 28%;
+		max-width: 28%;
+		.IDX-showcaseCell {
+			border: 0;
+			padding: 0;
+			width: 28%;
+			max-width: 28%;
+			box-shadow: none;
+			div {
+				text-align: left;
+			}
+			.IDX-showcaseContainer {
+				padding: 0;
+			}
+			.IDX-showcaseAddress,
+			.IDX-showcaseCityStateZip,
+			.IDX-showcasePrice
+			{
+				background-color: $color-light-grey;
+				font-family: $font-heading;
+			}
+			.IDX-showcaseAddress,
+			.IDX-showcaseCityStateZip {
+				padding: 3px 10px;
+				font-size: 18px;
+			}
+			.IDX-showcasePrice {
+				font-size: 18px;
+				font-weight: bold;
+				padding: 10px;
+			}
+		}
+	}
+	
 }
+
 section.property-alerts {
 	padding: 40px 0;
 	@include blue-grad;
@@ -215,6 +267,7 @@ section.home-latest {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		flex-basis: 100%;
 		@media screen and (min-width: $tabwidth) {
 
 		}
@@ -223,13 +276,17 @@ section.home-latest {
 		}
 	}
 	.left {
-		flex-basis: 50%;
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: 50%;
+		}
 	}
 	.right {
-		flex-basis: 50%;
 		background-color: #F4F4F4;
 		.photo {
 			margin: 0 0 20px 0;
+		}
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: 50%;
 		}
 	}
 }

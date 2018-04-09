@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * The main template file.
  *
@@ -34,8 +34,9 @@ setup_postdata( $post );
 			 	$aboutText = get_field('text');
 			 	$aboutlink = get_field('read_more_link');
 			?>
-            <li style="background-image: url(<?php echo $banner['url']; ?>);">
-				
+            <!-- <li style="background-image: url(<?php echo $banner['url']; ?>);"> -->
+            <li>
+				<img src="<?php echo $banner['url']; ?>" class="mobile"></img>
 				<section class="searchbox sections">
 					<h2><?php echo $title; ?></h2>
 					<h3><?php echo $subtitle; ?></h3>
@@ -46,9 +47,10 @@ setup_postdata( $post );
 
 endwhile;?>
 		</ul>
-		<div class="quicksearch-home"><?php dynamic_sidebar( 'quick-search' ); ?></div>
+		
 		
 	</div>
+	<div class="quicksearch-home"><?php dynamic_sidebar( 'quick-search' ); ?></div>
 </div>
 <?php
 endif;
@@ -84,8 +86,18 @@ wp_reset_postdata(); ?>
 			if ($wp_query->have_posts()) : ?>
 		    <?php while ($wp_query->have_posts()) : ?>
 		        
-		    <?php $wp_query->the_post(); ?>	
+		    <?php $wp_query->the_post(); 
+
+		    	$img = catch_that_image();
+
+		    ?>	
 		    <div class="blogstuff">
+		    	<?php 
+					if( has_post_thumbnail() ) {
+						the_post_thumbnail();
+					} elseif( $img ) { ?>
+						<img src="<?php echo $img; ?>">
+					<?php } ?>
 		   		<h3><?php the_title(); ?></h3>
 		    	<?php the_excerpt(); ?>
 		    </div>

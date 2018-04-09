@@ -87,15 +87,18 @@
 		width: 100%;
 		@media screen and (min-width: $tabwidth) {
 			// border-left: 1px solid #000;
-			line-height: 70px;
+			line-height: 40px;
 			width: auto;
 			// padding: 0 20px;
 			&:first-of-type {
 				border: 0;
 			}
 		}
+		@media screen and (min-width: $midwidth) {
+
+		}
 		@media screen and (min-width: $deskwidth) {
-			// padding: 0 30px;
+			line-height: 70px;
 		}
 
 		&:hover > a,
