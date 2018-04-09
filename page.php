@@ -28,6 +28,17 @@ get_header(); ?>
 
 						<div class="entry-content">
 							<?php the_content(); ?>
+
+							<?php if( is_page('sitemap') ) : 
+								echo '<section class="sitemap">';
+									
+									$args = array(
+											'title_li' =>'',
+											'exclude'  => '332',
+										);
+									wp_list_pages($args);
+								echo '</section>';
+							 endif; ?>
 						</div><!-- .entry-content -->
 					</article><!-- #post-## -->
 				</div>	

@@ -844,6 +844,9 @@ section.signups .impress-lead-signup{width:100%;margin:0 auto;display:-webkit-bo
 }@media screen and (min-width:900px){section.signups .impress-lead-signup{width:100%}
 }section.signups .impress-lead-signup input,section.signups .impress-lead-signup .idx-modal-shortcode-preview input{width:24%;padding:10px;font-size:.75rem;line-height:1;margin:0}
 section.signups .impress-lead-signup .ie-only{display:none}
+.ctct-form-text{color:#fff !important}
+.creds,.bottom{width:100%;text-align:center;padding:10px}
+.creds a,.bottom a{color:#fff}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
 .byline,.updated:not(.published){display:none}
@@ -967,7 +970,8 @@ article.post .blogpost .img{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%
 }article.post .blogpost .img img{width:100%}
 article.post .blogpost .content{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
 @media screen and (min-width:600px){article.post .blogpost .content{-webkit-flex-basis:70%;-ms-flex-preferred-size:70%;flex-basis:70%}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}.idxwrap{padding:50px 0;width:100%}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
