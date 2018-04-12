@@ -52,6 +52,7 @@
 	@media screen and (min-width: $deskwidth) {
 		margin-top: -130px;
 	}
+	
 	.quicksearch-home {
 		width: 100%;
 		position: relative; 
@@ -62,6 +63,7 @@
 			position: absolute; 
 			bottom: 80px;
 			left: 7%;
+			z-index: 11;
 		}
 		h2 {
 			display: none;
@@ -168,18 +170,25 @@ section.searchbox {
 section.featured-listings {
 	width: 100%;
 	position: relative;
+	clear: both;
 	h2 {
 		color: $color-dark-blue;
 		text-align: center;
 	}
 	#IDX-showcaseGallery-8826 {
-		width: 28%;
-		max-width: 28%;
+		width: auto;
+		max-width: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		.IDX-showcaseRow {
+			flex-basis: 30%;
+		}
 		.IDX-showcaseCell {
 			border: 0;
 			padding: 0;
-			width: 28%;
-			max-width: 28%;
+			width: 100%;
+			max-width: 100%;
 			box-shadow: none;
 			div {
 				text-align: left;
@@ -196,11 +205,11 @@ section.featured-listings {
 			}
 			.IDX-showcaseAddress,
 			.IDX-showcaseCityStateZip {
-				padding: 3px 10px;
+				padding: 1px 10px;
 				font-size: 18px;
 			}
 			.IDX-showcasePrice {
-				font-size: 18px;
+				font-size: 20px;
 				font-weight: bold;
 				padding: 10px;
 			}
@@ -612,4 +621,26 @@ article.post {
 .idxwrap {
 	padding: 50px 0;
 	width: 100%;
+}
+.ps-page {
+	#IDX-quicksearchForm-44954, #IDX-quicksearch-44954 {
+		border-radius: 0;
+		box-shadow: none;
+		.IDX-qsInput {
+			border: 1px solid #000;
+		}
+	}
+	#IDX-quicksearchForm-44954 {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.IDX-qsFieldWrap {
+			flex-basis: 100%;
+			@media screen and (min-width: $tabwidth) {
+				flex-basis: 30%;
+			}
+		}
+	}
+	
 }

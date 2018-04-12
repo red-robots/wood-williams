@@ -25,11 +25,14 @@ get_header(); ?>
 						</header><!-- .entry-header -->
 
 						<div class="entry-content">
-							<?php the_content(); ?>
+							<section class="ps-page">	
+								<?php the_content(); ?>
+							</section>	
 						</div><!-- .entry-content -->
 
-						
-<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-44955" src="//www.scotwilliamsrealty.idxbroker.com/idx/mapwidgetjs.php?widgetid=44955"></script>
+			
+				<!-- <script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-44955" src="//www.scotwilliamsrealty.idxbroker.com/idx/mapwidgetjs.php?widgetid=44955"></script> -->
+				
 
 					</article><!-- #post-## -->
 				</div>	

@@ -20,6 +20,7 @@ setup_postdata( $post );
 
  	if(have_rows('slides')) : ?>
 <div class="homebanner">
+	
 	<div class="flexslider">
         <ul class="slides">
        		<?php  while( have_rows('slides') ) : the_row();

@@ -37,7 +37,7 @@ $annNumber = get_field('ann_number', 'option');
 $annEmail = get_field('ann_email', 'option');
 $facebook = get_field('facebook_link', 'option');
 $instagram = get_field('instagram_link', 'option');
-
+$ifSocial = $facebook . $instagram;
 ?>
 </head>
 
@@ -47,25 +47,28 @@ $instagram = get_field('instagram_link', 'option');
 <?php if( !is_front_page() ) { ?><div class="blue-header"><?php } ?>
 
 	<section class="top-header">
+	<div class="black-grad"></div>
 		<div class="agentinfo">
 			<?php echo $scotName.' '.$scotNumber.' | '.$annName.' '.$annNumber; ?>
 		</div>
-		<div class="socialheader">
-			<?php if( $facebook ) { ?>
-				<div class="icon">
-					<a href="<?php echo $facebook ?>" target="_blank">
-						<i class="fab fa-facebook-f fa-2x"></i>
-					</a>
-				</div>
-			<?php } ?>
-			<?php if( $instagram ) { ?>
-				<div class="icon">
-					<a href="<?php echo $instagram ?>" target="_blank">
-						<i class="fab fa-instagram fa-2x"></i>
-					</a>
-				</div>
-			<?php } ?>
-		</div>
+		<?php if($ifSocial) : ?>
+			<div class="socialheader">
+				<?php if( $facebook ) { ?>
+					<div class="icon">
+						<a href="<?php echo $facebook ?>" target="_blank">
+							<i class="fab fa-facebook-f fa-2x"></i>
+						</a>
+					</div>
+				<?php } ?>
+				<?php if( $instagram ) { ?>
+					<div class="icon">
+						<a href="<?php echo $instagram ?>" target="_blank">
+							<i class="fab fa-instagram fa-2x"></i>
+						</a>
+					</div>
+				<?php } ?>
+			</div>
+		<?php endif; // if social ?>
 	</section>
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
