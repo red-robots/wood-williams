@@ -100,9 +100,14 @@ div {
 	}
 	.agentinfo-front {
 		color: #000;
+		position: relative;
+		z-index: 12;
 		text-align: center;
 		a {
 			color: #000;
+		}
+		@media screen and (min-width: $tabwidth) {
+			color: #fff;
 		}
 	}
 	.icon {

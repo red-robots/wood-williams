@@ -772,9 +772,10 @@ html[xmlns] .flexslider .slides,html[xmlns] .flexslider-f .slides{display:block}
 @media screen and (min-width:600px){.top-header .agentinfo,.top-header .socialheader{margin-left:20px;text-align:right}
 }.top-header .agentinfo,.top-header .socialheader{color:#fff}
 .top-header .agentinfo a,.top-header .socialheader a{color:#fff}
-.top-header .agentinfo-front{color:#000;text-align:center}
+.top-header .agentinfo-front{color:#000;position:relative;z-index:12;text-align:center}
 .top-header .agentinfo-front a{color:#000}
-.top-header .icon{width:auto;float:left;margin:0 5px}
+@media screen and (min-width:600px){.top-header .agentinfo-front{color:#fff}
+}.top-header .icon{width:auto;float:left;margin:0 5px}
 .top-header .icon a{color:#fff}
 .top-header .icon icon{-webkit-transform:scale(0.9);-ms-transform:scale(0.9);transform:scale(0.9);-webkit-transition:all ease .2s;transition:all ease .2s}
 .top-header .icon icon:hover{ransform:scale(1)}
