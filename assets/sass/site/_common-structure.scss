@@ -79,7 +79,8 @@ div {
 		}
 	}
 	.agentinfo, .socialheader {
-		color: #000;
+		// color: #000;
+		color: #fff;
 		width: auto;
 		position: relative;
 		z-index: 12;
@@ -322,7 +323,7 @@ footer.site-footer, section.property-alerts {
 		color: #fff;
 		text-align: center;
 		font-size: 24px;
-		margin: 30px 0;
+		padding: 30px 0;
 		@media screen and (min-width: $tabwidth) {
 			font-size: 18px;
 		}
@@ -359,10 +360,10 @@ footer.site-footer, section.property-alerts {
 			font-size: 20px;
 		}
 		@media screen and (min-width: $tabwidth) {
-			width: 80%;
+			// width: 80%;
 		}
 		@media screen and (min-width: $deskwidth) {
-			width: 40%;
+			// width: 40%;
 		}
 	}
 	.newsletter-signup {
@@ -414,35 +415,35 @@ footer.site-footer, section.property-alerts {
 	}
 }
 section.signups {
-	.impress-lead-signup {
-		width: 100%;
-		margin: 0 auto;
-		display: flex;
-		justify-content: space-between;
-		flex-direction: row;
-		flex-wrap: wrap;
-		@media screen and (min-width: $tabwidth) {
-			flex-wrap: nowrap;
-			width: 100%;
-			align-items: stretch;
-		}
-		@media screen and (min-width: $midwidth) {
-			width: 100%;
-		}
-		@media screen and (min-width: $midwidth) {
-			// width: 50%;
-		}
-		input, .idx-modal-shortcode-preview input {
-			width: 24%;
-			padding: 10px;
-			font-size: 0.75rem;
-			line-height: 1;
-			margin: 0;
-		}
-		.ie-only {
-			display: none;
-		}
-	}
+	// .impress-lead-signup {
+	// 	width: 100%;
+	// 	margin: 0 auto;
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	flex-direction: row;
+	// 	flex-wrap: wrap;
+	// 	@media screen and (min-width: $tabwidth) {
+	// 		flex-wrap: nowrap;
+	// 		width: 100%;
+	// 		align-items: stretch;
+	// 	}
+	// 	@media screen and (min-width: $midwidth) {
+	// 		width: 100%;
+	// 	}
+	// 	@media screen and (min-width: $midwidth) {
+	// 		// width: 50%;
+	// 	}
+	// 	input, .idx-modal-shortcode-preview input {
+	// 		width: 24%;
+	// 		padding: 10px;
+	// 		font-size: 0.75rem;
+	// 		line-height: 1;
+	// 		margin: 0;
+	// 	}
+	// 	.ie-only {
+	// 		display: none;
+	// 	}
+	// }
 }
 .ctct-form-text {
 	color: #fff !important;

@@ -20,7 +20,14 @@ get_header(); ?>
 				<header class="entry-header">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 				</header><!-- .entry-header -->
-
+				<?php 
+				$img = catch_that_image();
+				
+					if( has_post_thumbnail() ) {
+						the_post_thumbnail();
+					} elseif( $img ) { ?>
+						<img src="<?php echo $img; ?>">
+					<?php } ?>
 				<div class="entry-content">
 					<?php the_content(); ?>
 				</div><!-- .entry-content -->

@@ -37,6 +37,7 @@ $annNumber = get_field('ann_number', 'option');
 $annEmail = get_field('ann_email', 'option');
 $facebook = get_field('facebook_link', 'option');
 $instagram = get_field('instagram_link', 'option');
+// check to see if you have any
 $ifSocial = $facebook . $instagram;
 ?>
 </head>

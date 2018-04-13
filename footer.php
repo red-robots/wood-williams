@@ -17,29 +17,32 @@ $annNumber = get_field('ann_number', 'option');
 $annEmail = get_field('ann_email', 'option');
 $facebook = get_field('facebook_link', 'option');
 $instagram = get_field('instagram_link', 'option');
+// check to see if you have any
+$ifSocial = $facebook . $instagram;
 ?>
 
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
-
-		<section class="social">
-			<?php if( $facebook ) { ?>
-				<div class="icon">
-					<a href="<?php echo $facebook ?>" target="_blank">
-						<i class="fab fa-facebook-f fa-2x"></i>
-					</a>
-				</div>
-			<?php } ?>
-			<?php if( $instagram ) { ?>
-				<div class="icon">
-					<a href="<?php echo $instagram ?>" target="_blank">
-						<i class="fab fa-instagram fa-2x"></i>
-					</a>
-				</div>
-			<?php } ?>
-		</section>
+		<?php if($ifSocial) : ?>
+			<section class="social">
+				<?php if( $facebook ) { ?>
+					<div class="icon">
+						<a href="<?php echo $facebook ?>" target="_blank">
+							<i class="fab fa-facebook-f fa-2x"></i>
+						</a>
+					</div>
+				<?php } ?>
+				<?php if( $instagram ) { ?>
+					<div class="icon">
+						<a href="<?php echo $instagram ?>" target="_blank">
+							<i class="fab fa-instagram fa-2x"></i>
+						</a>
+					</div>
+				<?php } ?>
+			</section>
+		<?php endif; ?>
 		
 		<section class="footer-agents">
 			<?php echo $scotName.' '.$scotNumber.' | '.$annName.' '.$annNumber; ?>
@@ -50,7 +53,7 @@ $instagram = get_field('instagram_link', 'option');
 		
 
 	</div><!-- wrapper -->
-
+<?php if( !is_front_page() ) : ?>
 		<section class="signups sections signups-pa">
 			<div class="wrapper">
 				<div class="property-alerts">
@@ -65,6 +68,7 @@ $instagram = get_field('instagram_link', 'option');
 			
 			
 		</section>
+<?php endif; ?>
 
 		
 		
