@@ -626,6 +626,11 @@ article.post {
 	#IDX-quicksearchForm-44954, #IDX-quicksearch-44954 {
 		border-radius: 0;
 		box-shadow: none;
+
+		.IDX-qsLabel {
+			color: #fff;
+			width: 100%;
+		}
 		.IDX-qsInput {
 			border: 1px solid #000;
 		}
@@ -635,6 +640,9 @@ article.post {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		align-items: center;
+		background-color: rgba(#000, .8);
+		padding: 20px;
 		.IDX-qsFieldWrap {
 			flex-basis: 100%;
 			@media screen and (min-width: $tabwidth) {
