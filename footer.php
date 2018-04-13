@@ -56,7 +56,8 @@ $instagram = get_field('instagram_link', 'option');
 				<div class="property-alerts">
 					<div class="pa-form-wrapper">
 						<?php //get_template_part('inc/property-alerts'); ?>
-						<?php dynamic_sidebar( 'property-alerts' ); ?>
+						<?php //dynamic_sidebar( 'property-alerts' ); ?>
+						<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-8824" src="//woodwilliamsrealty.idxbroker.com/idx/leadsignupwidget.php?widgetid=8824"></script>
 					</div>
 				</div>
 			</div>
