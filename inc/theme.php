@@ -10,6 +10,7 @@
 show_admin_bar(false);
 
 add_image_size('agent', 700, 700, array('center', 'center'));
+add_image_size('homebanner', 1200, 800, array('center', 'center'));
 
 add_filter('jpeg_quality', function($arg){return 100;});
 

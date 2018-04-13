@@ -25,6 +25,9 @@ setup_postdata( $post );
         <ul class="slides">
        		<?php  while( have_rows('slides') ) : the_row();
 				$banner = get_sub_field('image');
+				// echo '<pre>';
+				// print_r($banner);
+				// echo '</pre>';
 				$title = get_sub_field('title');
 				$subtitle = get_sub_field('subtitle');
 				$link = get_sub_field('link');
@@ -37,7 +40,7 @@ setup_postdata( $post );
 			?>
             <!-- <li style="background-image: url(<?php echo $banner['url']; ?>);"> -->
             <li>
-				<img src="<?php echo $banner['url']; ?>" class="mobile"></img>
+				<img src="<?php echo $banner['sizes']['homebanner']; ?>" class="mobile"></img>
 				<section class="searchbox sections">
 					<h2><?php echo $title; ?></h2>
 					<h3><?php echo $subtitle; ?></h3>
