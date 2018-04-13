@@ -80,7 +80,7 @@ div {
 	}
 	.agentinfo, .socialheader {
 		// color: #000;
-		color: #fff;
+		
 		width: auto;
 		position: relative;
 		z-index: 12;
@@ -88,10 +88,22 @@ div {
 		text-align: center;
 		@media screen and (min-width: $tabwidth) {
 			margin-left: 20px;
-			color: #fff;
 			text-align: right;
 		}
 		
+	}
+	.agentinfo, .socialheader {
+		color: #fff;
+		a {
+			color: #fff;
+		}
+	}
+	.agentinfo-front {
+		color: #000;
+		text-align: center;
+		a {
+			color: #000;
+		}
 	}
 	.icon {
 		width: auto;

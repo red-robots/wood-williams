@@ -39,6 +39,12 @@ $facebook = get_field('facebook_link', 'option');
 $instagram = get_field('instagram_link', 'option');
 // check to see if you have any
 $ifSocial = $facebook . $instagram;
+
+if( is_front_page() ) {
+	$agentinfo = 'agentinfo-front';
+} else {
+	$agentinfo = 'agentinfo';
+}
 ?>
 </head>
 
@@ -49,7 +55,7 @@ $ifSocial = $facebook . $instagram;
 
 	<section class="top-header">
 	<div class="black-grad"></div>
-		<div class="agentinfo">
+		<div class="<?php echo $agentinfo; ?>">
 			<?php echo $scotName.' '.$scotNumber.' | '.$annName.' '.$annNumber; ?>
 		</div>
 		<?php if($ifSocial) : ?>
