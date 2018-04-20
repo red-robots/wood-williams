@@ -73,6 +73,7 @@ wp_reset_postdata(); ?>
 		<div class="pa-form-wrapper">
 			<?php //get_template_part('inc/property-alerts'); ?>
 			<?php dynamic_sidebar( 'property-alerts' ); ?>
+			<div class="already">Already have an account? <a href="https://woodwilliamsrealty.idxbroker.com/idx/userlogin"><u>Login here.</u></a> </div>
 		</div>
 	</div>	
 </section>

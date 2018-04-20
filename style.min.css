@@ -821,6 +821,8 @@ button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="su
 .sidebar li a:hover{background-color:rgba(255,255,255,0.7);color:#00486f}
 .signups-pa,.creds{background-color:#00486f}
 .signups-newsletter{background:-webkit-linear-gradient(left,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);background:linear-gradient(to right,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00486f',endColorstr='#000077ba',GradientType=0);padding:40px 0;color:#fff}
+.already{width:100%;text-align:center;color:#fff}
+.already a{color:#fff}
 footer.site-footer,section.property-alerts{width:100%;clear:both;padding:30px 0 0 0;background:-webkit-linear-gradient(left,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);background:linear-gradient(to right,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00486f',endColorstr='#000077ba',GradientType=0)}
 footer.site-footer .social,section.property-alerts .social{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:30px auto}
 footer.site-footer .social .icon,section.property-alerts .social .icon{width:auto;margin:0 10px}
@@ -837,7 +839,8 @@ footer.site-footer .bottom a,section.property-alerts .bottom a{color:#fff}
 @media screen and (min-width:600px){.signups .newsletter-signup{width:50%}
 }@media screen and (min-width:1200px){.signups .newsletter-signup{width:30%}
 }.signups .newsletter-signup h2{color:#fff;text-align:center;font-size:20px}
-.signups .newsletter-signup .ctct-form-defaults{padding:0;color:#fff}
+.signups .newsletter-signup .ctct-form-defaults{padding:0;color:#fff !important}
+.signups .newsletter-signup .ctct-inline-form #email_address_label_0{color:#fff}
 .signups .newsletter-signup .ctct-form-embed.form_0 .ctct-form-defaults{background-color:rgba(255,255,255,0)}
 .signups .newsletter-signup .ctct-form-header,.signups .newsletter-signup .ctct-form-footer{display:none}
 .signups .newsletter-signup .ctct-form-element,.signups .newsletter-signup .ctct-form-button{padding:10px;height:auto}
@@ -884,9 +887,11 @@ section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseRow{-webkit-fle
 section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell{border:0;padding:0;width:100%;max-width:100%;box-shadow:none}
 section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell div{text-align:left}
 section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseContainer{padding:0}
-section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseAddress,section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseCityStateZip,section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcasePrice{background-color:#efefef;font-family:"Open Sans",sans-serif}
-section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseAddress,section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseCityStateZip{padding:1px 10px;font-size:18px}
-section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcasePrice{font-size:20px;font-weight:bold;padding:10px}
+section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseAddress{padding:10px 10px 0 10px}
+section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseCityStateZip{padding:0 10px}
+section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseAddress,section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseCityStateZip,section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcasePrice{background-color:#efefef;font-family:"Open Sans",sans-serif;line-height:1}
+section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseAddress,section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcaseCityStateZip{font-size:18px}
+section.featured-listings #IDX-showcaseGallery-8826 .IDX-showcaseCell .IDX-showcasePrice{font-size:20px;font-weight:bold;padding:10px 10px 20px 10px}
 section.property-alerts{padding:40px 0;background:-webkit-linear-gradient(left,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);background:linear-gradient(to right,#00486f 0,rgba(0,72,111,0.99) 1%,#0077ba 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00486f',endColorstr='#000077ba',GradientType=0);text-align:center}
 section.property-alerts h2{color:#fff}
 section.property-alerts #LeadSignup{border:0;box-shadow:none}

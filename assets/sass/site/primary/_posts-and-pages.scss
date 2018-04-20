@@ -196,22 +196,29 @@ section.featured-listings {
 			.IDX-showcaseContainer {
 				padding: 0;
 			}
+			.IDX-showcaseAddress {
+				padding: 10px 10px 0 10px;
+			}
+			.IDX-showcaseCityStateZip {
+				padding: 0 10px;
+			}
 			.IDX-showcaseAddress,
 			.IDX-showcaseCityStateZip,
 			.IDX-showcasePrice
 			{
 				background-color: $color-light-grey;
 				font-family: $font-heading;
+				line-height: 1;
 			}
 			.IDX-showcaseAddress,
 			.IDX-showcaseCityStateZip {
-				padding: 1px 10px;
+				
 				font-size: 18px;
 			}
 			.IDX-showcasePrice {
 				font-size: 20px;
 				font-weight: bold;
-				padding: 10px;
+				padding: 10px 10px 20px 10px ;
 			}
 		}
 	}

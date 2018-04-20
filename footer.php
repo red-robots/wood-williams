@@ -61,6 +61,7 @@ $ifSocial = $facebook . $instagram;
 						<?php //get_template_part('inc/property-alerts'); ?>
 						<?php dynamic_sidebar( 'property-alerts' ); ?>
 						<!-- <script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-8824" src="//woodwilliamsrealty.idxbroker.com/idx/leadsignupwidget.php?widgetid=8824"></script> -->
+						<div class="already">Already have an account? <a href="https://woodwilliamsrealty.idxbroker.com/idx/userlogin"><u>Login here.</u></a> </div>
 					</div>
 				</div>
 			</div>

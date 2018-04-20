@@ -311,6 +311,12 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 	padding: 40px 0;
 	color: #fff;
 }
+.already {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	a {color:#fff;}
+}
 footer.site-footer, section.property-alerts {
 	width: 100%;
 	clear: both;
@@ -403,8 +409,15 @@ footer.site-footer, section.property-alerts {
 		}
 		.ctct-form-defaults {
 			padding: 0;
-			color: #fff;
+			color: #fff !important;
 		}
+		.ctct-inline-form {
+			#email_address_label_0 {
+				color: #fff;
+			}
+			
+		}
+		
 		.ctct-form-custom {
 			// display: flex; 
 			// justify-content: space-between;
