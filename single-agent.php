@@ -51,6 +51,15 @@ get_header(); ?>
 								<?php the_content(); ?>
 							</div><!-- .entry-content -->
 						</div>
+
+						<?php $agentProperty = get_field('agents_listings_widget');
+							if( $agentProperty != '' ) :
+						 ?>
+						<section class="agents-listings featured-listings">
+						<h2>Featured Properties by <?php the_title(); ?></h2>
+							<?php  echo $agentProperty; ?>
+						</section>
+						<?php endif; ?>
 						
 					</article>
 

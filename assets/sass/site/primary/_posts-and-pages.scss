@@ -175,26 +175,41 @@ section.featured-listings {
 		color: $color-dark-blue;
 		text-align: center;
 	}
-	#IDX-showcaseGallery-8826 {
+	#IDX-showcaseGallery-8826, 
+	#IDX-showcaseGallery-45787,
+	#IDX-showcaseGallery-45789,
+	#IDX-showcaseGallery-45785,
+	#IDX-showcaseGallery-45788 {
 		width: auto;
 		max-width: auto;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		.IDX-showcaseRow {
-			flex-basis: 30%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
 		}
 		.IDX-showcaseCell {
 			border: 0;
+			
 			padding: 0;
 			width: 100%;
 			max-width: 100%;
 			box-shadow: none;
+			flex-basis: 90%;
+			margin: 0 0 30px 0;
+			@media screen and (min-width: $tabwidth) {
+				flex-basis: 30%;
+			}
 			div {
 				text-align: left;
 			}
 			.IDX-showcaseContainer {
 				padding: 0;
+				border: 0;
+				border-bottom: 3px solid #ccc;
 			}
 			.IDX-showcaseAddress {
 				padding: 10px 10px 0 10px;
@@ -214,6 +229,15 @@ section.featured-listings {
 			.IDX-showcaseCityStateZip {
 				
 				font-size: 18px;
+				@media screen and (min-width: $tabwidth) {
+					font-size: 12px;
+				}
+				@media screen and (min-width: $midwidth) {
+					font-size: 14px;
+				}
+				@media screen and (min-width: $deskwidth) {
+					font-size: 18px;
+				}
 			}
 			.IDX-showcasePrice {
 				font-size: 20px;
@@ -675,4 +699,25 @@ article.post {
 		}
 	}
 	
+}
+section.agents-listings {
+	width: 100%;
+	padding: 40px 0;
+	clear: both;
+	h2 {
+		color: $color-dark-blue;
+		text-align: left;
+		font: {
+			size: 20px;
+			weight: normal;
+		}
+		text-transform: uppercase;
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 18px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 24px;
+		}
+	}
 }

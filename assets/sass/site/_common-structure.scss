@@ -246,7 +246,10 @@ header#masthead {
 		}
 	}
 }
-button, input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	@include orange-grad;
 	box-shadow: none;
 	border-radius: 0;
@@ -255,6 +258,20 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 	color: #fff;
 	text-transform: uppercase;
 	padding: 10px 20px;
+	&:hover {
+		box-shadow: none;
+		@include orange-grad-reverse;
+	}
+}
+.button a {
+	@include orange-grad;
+	box-shadow: none;
+	border-radius: 0;
+	border: 0;
+	text-shadow: none;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 15px 40px;
 	&:hover {
 		box-shadow: none;
 		@include orange-grad-reverse;

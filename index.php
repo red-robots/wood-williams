@@ -63,7 +63,9 @@ wp_reset_postdata(); ?>
 
 <section class="featured-listings sections">
 	<!-- <h2>Featured Listings</h2> -->
-	<div class="wrapper"><?php dynamic_sidebar( 'featured-listings' ); ?></div>
+	<div class="wrapper"><?php dynamic_sidebar( 'featured-listings' ); ?>
+		<!-- <script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-8827" src="//woodwilliamsrealty.idxbroker.com/idx/customslideshowjs.php?widgetid=8827"></script> -->
+	</div>
 	
 </section>
 
@@ -71,9 +73,15 @@ wp_reset_postdata(); ?>
 <section class="property-alerts sections">
 	<div class="wrapper">
 		<div class="pa-form-wrapper">
+
+		<h2>Sign up to receive Property Alerts</h2>
+		<div class="button">
+			<a href="https://woodwilliamsrealty.idxbroker.com/idx/search/emailupdatesignup">SIGN UP</a>
+		</div>
+
 			<?php //get_template_part('inc/property-alerts'); ?>
-			<?php dynamic_sidebar( 'property-alerts' ); ?>
-			<div class="already">Already have an account? <a href="https://woodwilliamsrealty.idxbroker.com/idx/userlogin"><u>Login here.</u></a> </div>
+			<?php //dynamic_sidebar( 'property-alerts' ); ?>
+			<!-- <div class="already">Already have an account? <a href="https://woodwilliamsrealty.idxbroker.com/idx/userlogin"><u>Login here.</u></a> </div> -->
 		</div>
 	</div>	
 </section>
