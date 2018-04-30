@@ -179,7 +179,8 @@ section.featured-listings {
 	#IDX-showcaseGallery-45787,
 	#IDX-showcaseGallery-45789,
 	#IDX-showcaseGallery-45785,
-	#IDX-showcaseGallery-45788 {
+	#IDX-showcaseGallery-45788,
+	#IDX-carouselGallery-45932 {
 		width: auto;
 		max-width: auto;
 		display: flex;
@@ -191,7 +192,8 @@ section.featured-listings {
 			justify-content: space-around;
 			flex-wrap: wrap;
 		}
-		.IDX-showcaseCell {
+		.IDX-showcaseCell
+		 {
 			border: 0;
 			
 			padding: 0;
@@ -203,18 +205,24 @@ section.featured-listings {
 			@media screen and (min-width: $tabwidth) {
 				flex-basis: 30%;
 			}
+			img {
+				width: 100%;
+			}
 			div {
 				text-align: left;
 			}
-			.IDX-showcaseContainer {
+			.IDX-showcaseContainer,
+			.IDX-carouselContainer {
 				padding: 0;
 				border: 0;
 				border-bottom: 3px solid #ccc;
 			}
-			.IDX-showcaseAddress {
+			.IDX-showcaseAddress,
+			.IDX-carouselAddress {
 				padding: 10px 10px 0 10px;
 			}
-			.IDX-showcaseCityStateZip {
+			.IDX-showcaseCityStateZip,
+			.IDX-carouselCityStateZip {
 				padding: 0 10px;
 			}
 			.IDX-showcaseAddress,
@@ -224,9 +232,12 @@ section.featured-listings {
 				background-color: $color-light-grey;
 				font-family: $font-heading;
 				line-height: 1;
+				width: 100%;
 			}
 			.IDX-showcaseAddress,
-			.IDX-showcaseCityStateZip {
+			.IDX-showcaseCityStateZip,
+			.IDX-carouselAddress,
+			.IDX-carouselCityStateZip {
 				
 				font-size: 18px;
 				@media screen and (min-width: $tabwidth) {
@@ -239,7 +250,8 @@ section.featured-listings {
 					font-size: 18px;
 				}
 			}
-			.IDX-showcasePrice {
+			.IDX-showcasePrice
+			.IDX-carouselPrice {
 				font-size: 20px;
 				font-weight: bold;
 				padding: 10px 10px 20px 10px ;

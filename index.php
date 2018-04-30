@@ -62,8 +62,9 @@ wp_reset_postdata(); ?>
 
 
 <section class="featured-listings sections">
-	<!-- <h2>Featured Listings</h2> -->
-	<div class="wrapper"><?php dynamic_sidebar( 'featured-listings' ); ?>
+	<h2>Featured Listings</h2>
+	<div class="wrapper"><?php //dynamic_sidebar( 'featured-listings' ); ?>
+	<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-45932" src="//woodwilliamsrealty.idxbroker.com/idx/carousel.php?widgetid=45932"></script>
 		<!-- <script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-8827" src="//woodwilliamsrealty.idxbroker.com/idx/customslideshowjs.php?widgetid=8827"></script> -->
 	</div>
 	
