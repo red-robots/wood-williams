@@ -263,18 +263,24 @@ input[type="submit"] {
 		@include orange-grad-reverse;
 	}
 }
-.button a {
-	@include orange-grad;
-	box-shadow: none;
-	border-radius: 0;
-	border: 0;
-	text-shadow: none;
-	color: #fff;
-	text-transform: uppercase;
-	padding: 15px 40px;
-	&:hover {
+.button {
+	width:auto;
+	margin: 0 auto;
+	display: inline-block;
+	a {
+		@include orange-grad;
 		box-shadow: none;
-		@include orange-grad-reverse;
+		border-radius: 0;
+		border: 0;
+		text-shadow: none;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 15px 40px;
+		margin: 0 auto;
+		&:hover {
+			box-shadow: none;
+			@include orange-grad-reverse;
+		}
 	}
 }
 .orange-grad {

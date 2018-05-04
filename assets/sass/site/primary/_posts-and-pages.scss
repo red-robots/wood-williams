@@ -222,7 +222,8 @@ section.featured-listings {
 				padding: 10px 10px 0 10px;
 			}
 			.IDX-showcaseCityStateZip,
-			.IDX-carouselCityStateZip {
+			.IDX-carouselCityStateZip,
+			.IDX-showcasePrice {
 				padding: 0 10px;
 			}
 			.IDX-showcaseAddress,
@@ -250,7 +251,7 @@ section.featured-listings {
 					font-size: 18px;
 				}
 			}
-			.IDX-showcasePrice
+			.IDX-showcasePrice,
 			.IDX-carouselPrice {
 				font-size: 20px;
 				font-weight: bold;
@@ -260,7 +261,10 @@ section.featured-listings {
 	}
 	
 }
-
+// .IDX-carouselPrice,
+// .IDX-showcasePrice {
+// 	font-size: 20px;
+// }
 section.property-alerts {
 	padding: 40px 0;
 	@include blue-grad;
@@ -273,11 +277,12 @@ section.property-alerts {
 		border: 0;
 		box-shadow: none;
 	}
-	.pa-form-wrapper {
 
-	}
 
 }
+.pa-form-wrapper {
+		text-align: center;
+	}
 section.home-latest {
 	width: 100%;
 	display: flex;
